@@ -2,7 +2,6 @@ package com.tes.rest.models.entity;
 
 import java.io.Serializable;
 
-import jakarta.annotation.Nonnull;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,14 +16,12 @@ public class Product implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY) //auto increment primary key id
     private Long id;
 
-    @Nonnull
     @Column (name = "product_name",nullable = false, length = 100) //edit column table
     private String name;
 
     @Column (name = "product_description", length = 500) //edit column table
     private String description;
-
-    @Nonnull
+    
     private double price;
 
     public Product() { 
