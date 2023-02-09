@@ -22,12 +22,17 @@ public class UploadFile {
     @Column (name = "description", length = 200)
     private String description;
 
+    //constructor table
     public UploadFile(Long id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
     }
 
+    public UploadFile() {
+    }
+
+    //gather and setter methods
     public Long getId() {
         return id;
     }
